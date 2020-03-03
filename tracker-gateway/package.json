@@ -1,0 +1,29 @@
+{
+  "name": "fe-tracker-gateway",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "CC0-1.0",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production ts-node src/main.ts",
+    "dev": "cross-env NODE_ENV=development nodemon --watch src/**/* -e ts,tsx --exec ts-node src/main.ts"
+  },
+  "devDependencies": {
+    "@types/koa": "2.0.52",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "7.0.42",
+    "@types/ua-parser-js": "^0.7.33",
+    "cross-env": "6.0.3",
+    "nodemon": "1.19.4",
+    "ts-node": "8.5.0",
+    "tslint": "5.20.1",
+    "typescript": "3.7.2"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "influx": "^5.5.1",
+    "koa": "2.11.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "7.4.0",
+    "ua-parser-js": "^0.7.20"
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>fe tracker sdk</title>
+    </head>
+    <body>
+        <button id="common">获取公共数据</button>
+        <button id="performance">获取性能数据</button>
+        <button id="log">发送日志</button>
+        <script src="./dist/fe-tracker-sdk.umd.js"></script>
+        <script>
+            const Tracker = window.mfwTracker;
+            const tracker = new Tracker({
+                id: 'MfwContentCenter',
+            });
+            tracker.init();
+
+            document.querySelector('#common').onclick = () => {
+                console.log(tracker.getCommon());
+            };
+
+            document.querySelector('#performance').onclick = () => {
+                console.log(tracker.getPerformance());
+            };
+
+        </script>
+    </body>
+</html>
